@@ -1,0 +1,24 @@
+{
+  "manifest_version" : 2,
+  "name" : "iSpy",
+  "version" : "0.0.1",
+
+  "description": "This addon will checkout what you do on the internet in order to troll you in a decent way.",
+
+  "icons": {
+    "48": "icons/eye.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "leakmystuffplz@gmail.com"
+    }
+  },
+
+  "content_scripts" : [
+    {
+      "matches" : ["*://*/"],
+      "js": ["test.js"]
+    }
+  ]
+}
