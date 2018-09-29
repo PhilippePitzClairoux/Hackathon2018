@@ -14,11 +14,13 @@
       "id": "leakmystuffplz@gmail.com"
     }
   },
-
+  "permissions": [
+    "<all_urls>"
+  ],
   "content_scripts" : [
     {
       "matches" : ["*://*/"],
-      "js": ["test.js"]
+      "js": ["scripts/request.js", "scripts/spy.js", "test.js"]
     }
   ]
 }
