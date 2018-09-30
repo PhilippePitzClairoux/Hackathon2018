@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sir Willard de Chateauguay</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/style_gui.css"/>
+	<link rel="icon" href="icon.ico" type="image/ico" sizes="16x16"/>
+</head>
+<body>
+	<header>
+	</header>
+	<<section>
+		<img src="./ico1.png" alt="Sir Willard" id="willard"/>
+		<p id="text_zone1">Bien le bonjour cher paysan! Mon nom est .....</p>
+		<p id="text_zone2"></p>
+	</section>
+	<footer>
+		<p><a href="javascript:window.close();">Prendre congé</a></p>
+		<p></p>
+	</footer>
+	<audio>
+		<source src="trompette.wav" type="audio/wav"/>
+	</audio>
+	<script src="gui.js"></script>
+	<script>
+
+
+	//Animation de Willard
+	 let gif_p1 = false;
+
+	function gif(){
+  		
+	  	if(gif_p1){
+	  		document.getElementById("willard").src = "./ico1.png";
+	  		gif_p1 = false;
+	  	}
+	  	else{
+	  		document.getElementById("willard").src = "./ico0.png";
+	  		gif_p1 = true;
+	  	}
+
+  }
+
+	setInterval(function(){
+		gif();
+	},300);
+
+	function show_willard(msg=""){
+	
+		document.getElementsByTagName("audio")[0].play();
+
+	  		document.getElementsByTagName("body")[0].classList.remove("hide");
+	  		document.getElementById("text_zone").innerHTML = msg;
+
+	}
+
+	function hide_willard(){
+		document.getElementsByTagName("body")[0].classList.add("hide");
+	}
+
+	show_willard();
+
+ 
+	</script>
+</body>
+</html>
