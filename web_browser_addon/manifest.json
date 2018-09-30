@@ -2,6 +2,7 @@
   "manifest_version" : 2,
   "name" : "iSpy",
   "version" : "0.0.1",
+  "background" : { "scripts": [ "background.js" ] },
 
   "description": "This addon will checkout what you do on the internet in order to troll you in a decent way.",
 
@@ -15,12 +16,16 @@
     }
   },
   "permissions": [
-    "<all_urls>"
+    "<all_urls>",
+    "activeTab",
+    "tabs",
+    "webNavigation"
   ],
   "content_scripts" : [
     {
       "matches" : ["*://*/"],
-      "js": ["scripts/request.js", "scripts/spy.js", "test.js"]
+      "js": ["scripts/request.js", "content.js"],
+      "run_at": "document_start"
     }
   ]
 }

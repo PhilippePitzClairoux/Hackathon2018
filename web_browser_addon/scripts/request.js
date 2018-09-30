@@ -1,5 +1,5 @@
 const ip = '127.0.0.1';
-const port= 6666;
+const port= 8080;
 const server = { address: ip + ":" + port.toString() };
 const request = new XMLHttpRequest();
 
