@@ -1,1 +1,5 @@
-Add desc here
+This section of the code will be the web browser addon. It will take data from the user
+and send it to the local server for further analysis. This addon will also perform actions such as :
+ - Closing a tab
+ - Censoring words
+ - Rick rollin' people
